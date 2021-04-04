@@ -1,20 +1,70 @@
 {
-  "name": "sqip-loader",
+  "name": "@mole-inc/sqip-loader",
   "version": "1.0.0",
-  "description": "Loads images and exports tiny SQIP previews as image/svg+xml URL-encoded data",
-  "main": "lib",
+  "description": "Loads images and exports tiny SQIP previews as image/svg+xml data",
+  "main": "lib/index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "example": "example"
   },
-  "author": "Emil Tholin @tholle1234",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "Webpack",
+    "svg",
+    "image",
+    "loader"
+  ],
+  "scripts": {
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint . --ext .js --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.js\" --ignore-path .gitignore --check",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "npm run-script lint:eslint -- --fix",
+    "fix:prettier": "npm run-script lint:prettier -- --write",
+    "prepare": "husky install",
+    "release": "standard-version"
+  },
   "license": "MIT",
-  "repository": "EmilTholin/sqip-loader",
+  "repository": "github:mole-inc/sqip-loader",
   "dependencies": {
-    "loader-utils": "^1.2.3",
-    "schema-utils": "^2.5.0",
-    "sqip": "^0.3.3"
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^3.0.0",
+    "sqip": "^1.0.0-alpha.32",
+    "sqip-plugin-blur": "^1.0.0-alpha.33",
+    "sqip-plugin-data-uri": "^1.0.0-alpha.33",
+    "sqip-plugin-primitive": "^1.0.0-alpha.34",
+    "sqip-plugin-svgo": "^1.0.0-alpha.33"
   },
   "peerDependencies": {
     "file-loader": "*"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-react": "^7.23.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "standard-version": "^9.1.1"
+  },
+  "resolutions": {
+    "node-vibrant": "3.2.1-alpha.1"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
   }
 }

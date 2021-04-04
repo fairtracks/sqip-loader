@@ -1,4 +1,5 @@
 # Example
+
 ```bash
 git clone git@github.com:EmilTholin/sqip-loader.git
 cd sqip-loader/example

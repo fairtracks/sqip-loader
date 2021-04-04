@@ -2,25 +2,28 @@
 
 # SQIP Loader
 
-Loads images and exports tiny SQIP previews as image/svg+xml URL-encoded data
+Loads images and exports tiny SQIP previews as image/svg+xml data
+
+**This is a fork of [EmilTholin/sqip-loader](https://github.com/EmilTholin/sqip-loader).**  
+`@mole-inc/sqip-loader` is depends on the canary version of [sqip](https://github.com/axe312ger/sqip).  
+If you use stable one, you are able to use original [sqip-loader](https://www.npmjs.com/package/sqip-loader).
 
 ## Requirements for non-64bit operating systems
 
-* [Golang][golang-url].
-* [Primitive][primitive-url].
+- [Primitive][primitive-url].
 
 ## Install
 
 ```bash
-npm install --save-dev sqip-loader
+npm install --save-dev @mole-inc/sqip-loader
 ```
 
 ## Usage
 
-The `sqip-loader` loads your image and exports the url of the image as `src`, the image/svg+xml URL-encoded data as `preview`, and a `dimensions` object containing width, height and the type of the imported image.
+The `@mole-inc/sqip-loader` loads your image and exports the url of the image as `src`, the image/svg+xml URL-encoded data as `preview`, and a `sizes` object containing width, height and the type of the imported image.
 
 ```js
-import { src, preview, dimensions } from './image.png';
+import { src, preview, sizes } from './image.png'
 ```
 
 **webpack.config.js**
@@ -33,16 +36,16 @@ module.exports = {
         test: /\.(gif|png|jpe?g)$/i,
         use: [
           {
-            loader: 'sqip-loader',
+            loader: '@mole-inc/sqip-loader',
             options: {
-              numberOfPrimitives: 20
-            }
-          }
-        ]
-      }
-    ]
-  }
-};
+              numberOfPrimitives: 20,
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
 ```
 
 It can also be used in conjunction with [url-loader][url-loader] or [file-loader][file-loader].
@@ -57,22 +60,22 @@ module.exports = {
         test: /\.(gif|png|jpe?g)$/i,
         use: [
           {
-            loader: 'sqip-loader',
+            loader: '@mole-inc/sqip-loader',
             options: {
-              numberOfPrimitives: 20
-            }
+              numberOfPrimitives: 20,
+            },
           },
           {
             loader: 'url-loader',
             options: {
-              limit: 8192
-            }
-          }
-        ]
-      }
-    ]
-  }
-};
+              limit: 8192,
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
 ```
 
 ## Options
@@ -84,9 +87,8 @@ module.exports = {
 |        **`blur`**         | `{Number}`  |  `12`   | Specifies the standard deviation of the Gaussian blur                                                                                                                                                                              |
 | **`skipPreviewIfBase64`** | `{Boolean}` | `false` | If set to `true`, will not generate a preview if the image already is base64 encoded. Useful when the inlined base64 representation is enough, and you don't want to bloat your files with unused previews                         |
 
-[npm]: https://img.shields.io/npm/v/sqip-loader.svg
-[npm-url]: https://npmjs.com/package/sqip-loader
-[golang-url]: https://golang.org/doc/install
+[npm]: https://img.shields.io/npm/v/@mole-inc/sqip-loader.svg
+[npm-url]: https://npmjs.com/package/@mole-inc/sqip-loader
 [primitive-url]: https://github.com/fogleman/primitive
 [file-loader]: https://github.com/webpack-contrib/file-loader
 [url-loader]: https://github.com/webpack-contrib/url-loader
