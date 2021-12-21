@@ -1,7 +1,7 @@
 # Example
 
 ```bash
-git clone git@github.com:EmilTholin/sqip-loader.git
+git clone https://github.com/mole-inc/sqip-loader.git
 cd sqip-loader/example
 npm install
 npm start
