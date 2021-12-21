@@ -1,6 +1,6 @@
 {
   "name": "@mole-inc/sqip-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loads images and exports tiny SQIP previews as image/svg+xml data",
   "main": "lib/index.js",
   "directories": {
