@@ -9,6 +9,7 @@ import {
 import homer from './images/homer.gif'
 import hercules from './images/hercules.jpg'
 import mountain from './images/mountain.jpg'
+import coin from '!!@fairtracks/sqip-loader?background=#ffffff00!./images/coin.png'
 
 function Img({ src, preview }) {
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -39,6 +40,7 @@ ReactDOM.render(
     <Img {...homer} />
     <Img {...hercules} />
     <Img {...mountain} />
+    <Img {...coin} />
   </div>,
   document.getElementById('app')
 )

@@ -25,6 +25,7 @@ module.exports = {
             loader: '@fairtracks/sqip-loader',
             options: {
               // numberOfPrimitives: 20,
+              // background: ffffff00,
               // mode: 0,
               // blur: 12,
               // skipPreviewIfBase64: false
