@@ -1,5 +1,5 @@
 {
-  "name": "@mole-inc/sqip-loader",
+  "name": "@fairtracks/sqip-loader",
   "version": "1.0.1",
   "description": "Loads images and exports tiny SQIP previews as image/svg+xml data",
   "main": "lib/index.js",
@@ -27,15 +27,15 @@
     "release": "standard-version"
   },
   "license": "MIT",
-  "repository": "github:mole-inc/sqip-loader",
+  "repository": "github:fairtracks/sqip-loader",
   "dependencies": {
     "loader-utils": "^2.0.0",
     "schema-utils": "^3.0.0",
-    "sqip": "1.0.0-alpha.34",
-    "sqip-plugin-blur": "1.0.0-alpha.35",
-    "sqip-plugin-data-uri": "1.0.0-alpha.35",
-    "sqip-plugin-primitive": "1.0.0-alpha.36",
-    "sqip-plugin-svgo": "^1.0.0-alpha.35"
+    "sqip": "^1.0.0-alpha.38",
+    "sqip-plugin-blur": "^1.0.0-alpha.39",
+    "sqip-plugin-data-uri": "^1.0.0-alpha.39",
+    "sqip-plugin-primitive": "^1.0.0-alpha.40",
+    "sqip-plugin-svgo": "^1.0.0-alpha.40"
   },
   "peerDependencies": {
     "file-loader": "*"

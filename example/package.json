@@ -6,7 +6,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
-    "@mole-inc/sqip-loader": "file:..",
+    "@fairtracks/sqip-loader": "file:..",
     "babel-loader": "^8.0.6",
     "css-loader": "^5.2.0",
     "file-loader": "^6.2.0",

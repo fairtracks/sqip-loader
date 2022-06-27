@@ -5,7 +5,7 @@ import './styles.css'
 import {
   src,
   preview,
-} from '!!@mole-inc/sqip-loader?numberOfPrimitives=20!./images/bridesmaid.png'
+} from '!!@fairtracks/sqip-loader?numberOfPrimitives=20!./images/bridesmaid.png'
 import homer from './images/homer.gif'
 import hercules from './images/hercules.jpg'
 import mountain from './images/mountain.jpg'

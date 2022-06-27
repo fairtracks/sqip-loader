@@ -22,7 +22,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         use: [
           {
-            loader: '@mole-inc/sqip-loader',
+            loader: '@fairtracks/sqip-loader',
             options: {
               // numberOfPrimitives: 20,
               // mode: 0,
